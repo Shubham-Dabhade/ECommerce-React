@@ -169,7 +169,7 @@ const Button = styled.button`
 const Cart = () => {
   const cart = useSelector((state)=>state.cart);
   const product = cart.products;
-  const [products,setProducts] = useState(JSON.parse(localStorage.getItem("cart")).products);
+  const [products,setProducts] = useState(cart.products);
   const [stripeToken, setStripeToken] = useState(null);
   const [quantity,setQuantity]= useState();
   const dispatch= useDispatch();
